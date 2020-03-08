@@ -1,1 +1,1 @@
-# blank-react
+# blank-next
