@@ -13,7 +13,10 @@
     "url": "git+https://github.com/zzzaim/blank-next.git"
   },
   "scripts": {
-    "test": "eslint ."
+    "dev": "next",
+    "test": "eslint .",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "next": "^9.2.2",
