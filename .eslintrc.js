@@ -1,3 +1,5 @@
+const { aliasConfig } = require("./next.config");
+
 module.exports = {
   env: {
     browser: true,
@@ -25,7 +27,22 @@ module.exports = {
     }
   },
   plugins: ["react", "react-hooks", "jsx-a11y", "import"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
   settings: {
+    "import/resolver": {
+      webpack: {
+        config: {
+          resolve: {
+            alias: aliasConfig.resolve.alias,
+            extensions: [".js", ".jsx"]
+          }
+        }
+      }
+    },
     react: {
       version: "detect"
     }
