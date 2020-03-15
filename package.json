@@ -14,7 +14,8 @@
   },
   "scripts": {
     "dev": "next",
-    "test": "eslint .",
+    "lint": "eslint .",
+    "test": "npm run lint",
     "build": "next build",
     "start": "next start"
   },

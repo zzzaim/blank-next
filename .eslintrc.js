@@ -16,6 +16,7 @@ module.exports = {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
   },
+  ignorePatterns: ["!*rc.js"],
   parserOptions: {
     sourceType: "module",
     ecmaVersion: 2018,
@@ -23,11 +24,10 @@ module.exports = {
       jsx: true
     }
   },
+  plugins: ["react", "react-hooks", "jsx-a11y", "import"],
   settings: {
     react: {
       version: "detect"
     }
-  },
-  plugins: ["react", "react-hooks", "jsx-a11y", "import"],
-  ignorePatterns: ["!*rc.js"]
+  }
 };
